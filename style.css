@@ -11,55 +11,106 @@ body {
     
 }
 
-h1{
+h2{
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+    
 }
 
-.navbar {
+h2 .primera-letra {
+    font-size: 40px;
+    
+}
+
+nav {
     display: flex;
-    font-size: 16px;
-    justify-content: space-between;
-    background-color: var(--primary);
+    align-items: center;
     padding: 16px;
-    border-bottom: 1px solid black;
+    justify-content: space-between;
+    border-bottom: 2px var(--secondary);
+    position: sticky;
+    background-color: var(--primary);
+    top: 0 ;
 }
 
-.navbar a {
-    text-decoration: none;
-    padding: 0.5rem var(--size);
-    color: black;
-    
-    
+
+@media (max-width: 920px) {
+    nav img {
+        margin: 0 auto
+    }
+
+    .opciones {
+        display : none
+    }
+    .iconos {
+        display: none;
+    }
+}
+
+.opciones span {
+    padding: 16px;
+}
+
+.opciones img {
+    padding: 16px;
 }
 
 .image-container {
+    max-width: 1280px;
     display: flex;
     flex-wrap: wrap ;
-    flex-direction: wrap;
-    justify-content: space-between;
-    
+    justify-content: center;
+    margin: 0 auto
 }
 
-img {
-    font-size: 24px;
-    padding: 32px;
-    margin: 8px;
-    border-radius: 10%;
+.item {
+    margin: 32px;
+}
 
-}    
+.item img {
+    border-radius: 10px;
+}
 
-
-.navbar2 {
+.informacion {
     display: flex;
-    font-size: 16px;
-    justify-content: space-around;
-    background-color: black;
-    color: white;
-    padding: var(--size);
+    justify-content: space-between;
+    margin-top: 16px;
+    padding: 16px;
 }
-.navbar2 a {
-    text-decoration: none;
-    padding: 0.5rem var(--size);
-    color: white;
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 32px;
+}
+
+@media (max-width: 920px) {
+    footer {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .footer-item {
+        padding-bottom: 16px;
+        border-bottom: 1px var(--primary);
+    }
     
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.footer-item span {
+    color: var(--primary);
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: auto;
+
 }
